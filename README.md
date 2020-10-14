@@ -57,13 +57,17 @@ variable and how to fix it here for [windows][win-path] or
 
 ## Setup
 
+> If you want to commit and push your work as you go, you'll want to
+> [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+> first and then clone your fork rather than this repo directly.
+
 After you've made sure to have the correct things (and versions) installed, you
 should be able to just run a few commands to get set up:
 
 ```
 git clone https://github.com/kentcdodds/advanced-react-patterns.git
 cd advanced-react-patterns
-npm run setup --silent
+node setup
 ```
 
 This may take a few minutes. **It will ask you for your email.** This is
@@ -74,6 +78,20 @@ If you get any errors, please read through them and see if you can find out what
 the problem is. If you can't work it out on your own then please [file an
 issue][issue] and provide _all_ the output from the commands you ran (even if
 it's a lot).
+
+If you can't get the setup script to work, then just make sure you have the
+right versions of the requirements listed above, and run the following commands:
+
+```
+npm install
+npm run validate
+```
+
+It's recommended you run everything locally in the same environment you work in
+every day, but if you're having issues getting things set up, you can also set
+this up using [GitHub Codespaces](https://github.com/features/codespaces)
+([video demo](https://www.youtube.com/watch?v=gCoVJm3hGk4)) or
+[Codesandbox](https://codesandbox.io/s/github/kentcdodds/advanced-react-patterns).
 
 ## Running the app
 
@@ -174,6 +192,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/nawok"><img src="https://avatars3.githubusercontent.com/u/159773?v=4" width="100px;" alt=""/><br /><sub><b>Pavel Fomchenkov</b></sub></a><br /><a href="https://github.com/kentcdodds/advanced-react-patterns/commits?author=nawok" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.seemaullal.com"><img src="https://avatars0.githubusercontent.com/u/8728285?v=4" width="100px;" alt=""/><br /><sub><b>Seema Ullal</b></sub></a><br /><a href="https://github.com/kentcdodds/advanced-react-patterns/commits?author=seemaullal" title="Documentation">📖</a></td>
   </tr>
 </table>
 
@@ -198,7 +217,7 @@ Thank you! https://kcd.im/arp-ws-feedback
 [node]: https://nodejs.org
 [git]: https://git-scm.com/
 [build-badge]: https://img.shields.io/travis/kentcdodds/advanced-react-patterns.svg?style=flat-square&logo=travis
-[build]: https://travis-ci.org/kentcdodds/advanced-react-patterns
+[build]: https://travis-ci.com/kentcdodds/advanced-react-patterns
 [license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
 [license]: https://github.com/kentcdodds/advanced-react-patterns/blob/main/LICENSE
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
